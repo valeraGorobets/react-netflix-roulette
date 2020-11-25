@@ -1,9 +1,13 @@
 import React from 'react';
 import './App.less';
 import { Header } from './Header/Header';
+import { Main } from './Main/Main';
 
 export const App = () => {
 	return (
-		<Header/>
+		<>
+			<Header/>
+			<Main/>
+		</>
 	);
 };

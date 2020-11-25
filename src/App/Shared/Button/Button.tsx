@@ -1,11 +1,11 @@
-import React from 'react';
+import React, { FC } from 'react';
 import './Button.less';
 
 interface IButton {
 	text: string;
 }
 
-export const AppButton: React.FC<IButton> = ({text}) => {
+export const AppButton: FC<IButton> = ({text}) => {
 	return (
 		<button>{text}</button>
 	);
