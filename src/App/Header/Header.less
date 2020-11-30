@@ -1,0 +1,32 @@
+.header {
+	background: #4C4C4C;
+	display: flex;
+	height: 300px;
+	justify-content: space-around;
+	overflow: hidden;
+	position: relative;
+
+	&:before {
+		background-image: url('../../assets/posters.jpg');
+		background-position: 50% 0;
+		background-repeat: no-repeat;
+		background-size: cover;
+		content: ' ';
+		display: block;
+		height: 100%;
+		left: 0;
+		opacity: 0.6;
+		position: absolute;
+		top: 0;
+		width: 100%;
+		z-index: 1;
+	}
+
+	&__wrapper {
+		color: white;
+		display: flex;
+		flex-direction: column;
+		position: relative;
+		z-index: 2;
+	}
+}
