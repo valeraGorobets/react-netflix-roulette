@@ -1,7 +1,8 @@
 import React from 'react';
 import { Filters } from './Filters/Filters';
-import { SortBy } from './SortBy/SortBy';
 import './Main.less';
+import { MovieList } from './MoviesList/MovieList';
+import { SortBy } from './SortBy/SortBy';
 
 const sortingOptions: string[] = [
 	'Release Date',
@@ -27,9 +28,12 @@ export const Main = () => {
 
 	return (
 		<div className='main'>
-			<div className='filters-panel__wrapper content-wrapper'>
-				<Filters options={filtersOptions} handleChange={onFiltersChange}/>
-				<SortBy options={sortingOptions} handleChange={onSortChange}/>
+			<div className='content-wrapper'>
+				<div className='filters-panel__wrapper'>
+					<Filters options={filtersOptions} handleChange={onFiltersChange}/>
+					<SortBy options={sortingOptions} handleChange={onSortChange}/>
+				</div>
+				<MovieList/>
 			</div>
 		</div>
 	);
